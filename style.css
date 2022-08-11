@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+:root{
+    --brand-bg: #262626;
+    --bg-alternative: #ffd618;
+    --whatsapp: #25d366;
+    --brand-light: #fff;
+}
+
+html, body{
+background-color: var(--brand-bg);
+}
+
+
+img{
+    display: inline-block;
+    width: 20.4rem;
+    height: 20.4rem;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    top: 2.5rem;
+    left:3rem;
+}
+
+main{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+
+}
+
+section{
+    background-color: var(--brand-bg);
+    margin-inline: 5rem;
+    height: 100%;
+    color: var(--brand-light);
+    margin: 0;
+}
+
+
+
+
+.menu{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-areas: "Main secundary";
+    gap: 3rem;
+}
+
+.group-item1{
+    grid-area: Main;
+    padding-bottom: 2rem
+}
+.group-item2{
+    grid-area: secundary;
+    padding-block: 2rem;
+}
+header{
+    height: 12.5rem;
+    background-color: var(--bg-alternative);
+    position: relative;
+    color:var(--brand-bg);
+    padding: 2rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+header h1{
+    font-weight: bold;
+    font-size: 1.875rem;
+}
+header p{
+    padding-top: 0.5rem;
+}
+
+header  hr{
+        height: 0.125rem;
+        background-color: var(--brand-bg);
+        border: none;
+        width: 3rem;
+}
+header strong{
+    padding-block: 0.5rem;
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-between;
+    padding-block: 0.25rem;
+}
+
+h5 {
+    color: var(--bg-alternative);
+    padding-block: 0.5rem;
+    border-bottom: 2px solid var(--bg-alternative);
+    font-size: 1.25rem;
+}
+
+.container-img{
+    overflow: hidden;
+    padding-top: 0.1875rem;
+}
+
+
+.float-button {
+    position:fixed;
+	width: 3.75rem;
+	height: 3.75rem;
+	bottom: 2.5rem;
+	right: 2.5rem;
+	background-color: var(--whatsapp);
+	color: var(--brand-light);
+	border-radius: 3.125rem;
+	text-align: center;
+    font-size: 1.875rem;
+    z-index: 100;
+}
+
+.float-button a svg{
+    margin-top: 0.59375rem;
+}
+
+
+@media(max-width: 900px){
+    .menu{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .group-item1,
+    .group-item2{
+        padding-block: initial;
+    }
+
+    img{
+        display: inline-block;
+        width: 20.4rem;
+        height: 20.4rem;
+        border-radius: 50%;
+        object-fit: cover;
+        position: initial;
+        top: initial;
+        left: initial;
+    }
+    .float-button{
+        left: 85%;
+      
+    }
+    svg{
+        width: 1.875rem;
+
+    }
+}
